@@ -18,6 +18,11 @@ session = tf.compat.v1.Session()
 res = session.run(c, feed_dict={a: [[0.1, 0.1, 0.1]], b: [[2, 3, 4]]})
 print(res)
 
+a_np = np.array([[1, 2, 3], [4, 5, 6]])
+b_np = np.array([[6, 5, 4], [3, 2, 1]])
+res = sess.run(c, feed_dict={a:a_np, b:b_np})
+print(res)
+
 # Define a placeholder and operation
 x = tf.compat.v1.placeholder(tf.float32, shape=[None, 1], name='x')
 
